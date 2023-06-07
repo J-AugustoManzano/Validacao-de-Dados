@@ -1,32 +1,22 @@
 import std.stdio;
 import std.string;
+import std.algorithm;
 
 void main()
 {
-  
   string TEXTO;
   bool VALIDACAO;
-  size_t I;
 
   do
   {
-    write("Entre uma cadeia alfabética: ");
+    write("Entre uma cadeia alfabetica: ");
     TEXTO = readln().strip();
-    VALIDACAO = true;
-    for (I = 0; I < TEXTO.length; I++)
-    {
-      char CARACTERE = TEXTO[I];
-      if (!((CARACTERE >= 'A' && CARACTERE <= 'Z') || 
-            (CARACTERE >= 'a' && CARACTERE <= 'z') || 
-             CARACTERE == ' '))
-      {
-        VALIDACAO = false;
-        break;
-      }
-    }
+    VALIDACAO = TEXTO.any!(c => (c >= 'A' && c <= 'Z') || 
+                                (c >= 'a' && c <= 'z') || 
+                                 c == ' ');
     if (VALIDACAO == false)
     {
-      writeln("Entrada inválida. Por favor, tente novamente.");
+      writeln("Entrada invalida. Por favor, tente novamente.");
     }
     else
     {
@@ -34,5 +24,6 @@ void main()
     }
   }
   while (true);
-  writeln("Você informou a cadeia: ", TEXTO);
+  
+  writeln("Voce informou a cadeia: ", TEXTO);
 }
