@@ -6,11 +6,12 @@ class Program
   {
     
     int NUMERO;
+    string NUMERO_AUX;
     
     do
     {
       Console.Write("Entre um numero: ");
-      string NUMERO_AUX = Console.ReadLine();
+      NUMERO_AUX = Console.ReadLine();
       if (int.TryParse(NUMERO_AUX, out NUMERO))
       {
         break;

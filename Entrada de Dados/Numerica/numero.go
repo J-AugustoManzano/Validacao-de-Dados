@@ -2,7 +2,7 @@ package main
 
 import ("fmt"; "strconv")
 
-var NUMERO int
+var NUMERO, ACERTO, ERRO int
 var NUMERO_AUX string
 
 func main() {

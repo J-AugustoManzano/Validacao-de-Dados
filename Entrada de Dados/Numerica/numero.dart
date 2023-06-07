@@ -1,15 +1,19 @@
 import 'dart:io';
 
 void main() {
+
   int NUMERO;
+  String NUMERO_AUX;
+  
   do {
-    stdout.write('Entre um número: ');
+    stdout.write('Entre um numero: ');
+    NUMERO_AUX = stdin.readLineSync()!;
     try {
-      NUMERO = int.parse(stdin.readLineSync()!);
+      NUMERO = int.parse(NUMERO_AUX);
       break;
     } catch (FormatException) {
-      print('Entrada inválida. Por favor, tente novamente.');
+      print('Entrada invalida. Por favor, tente novamente.');
     }
   } while (true);
-  print('Você informou o número: $NUMERO');
+  print('Voce informou o número: $NUMERO');
 }

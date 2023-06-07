@@ -7,7 +7,7 @@ int NUMERO;
 int main(void) {
   do {
     cout << "Entre um numero: ";
-    if (!(cin >> NUMERO)) {
+    if (!(cin >> NUMERO) == true) {
       cout << "Entrada invalida. Por favor, tente novamente." << endl;
       cin.clear();
       cin.ignore(numeric_limits<streamsize>::max(), '\n');

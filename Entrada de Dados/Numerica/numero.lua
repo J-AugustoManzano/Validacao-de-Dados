@@ -1,10 +1,12 @@
 local NUMERO = nil
+local NUMERO_AUX = ""
+
 repeat
   io.write("Entre um numero: ")
-  local input = io.read("*l")
-  NUMERO = tonumber(input)
+  NUMERO_AUX = io.read("*l")
+  NUMERO = tonumber(NUMERO_AUX)
   if (NUMERO == nil) then
     print("Entrada invalida. Por favor, tente novamente.")
   end
-until NUMERO ~= nil
+until (NUMERO ~= nil)
 print("Voce informou o numero: " .. NUMERO)

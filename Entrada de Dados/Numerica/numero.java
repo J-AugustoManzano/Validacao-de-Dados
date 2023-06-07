@@ -4,11 +4,12 @@ class Main {
   public static void main(String[] args) {
 
     int NUMERO;
+    String NUMERO_AUX;
 
     Scanner entrada = new Scanner(System.in);
     do {
       System.out.print("Entre um numero: ");
-      String NUMERO_AUX = entrada.nextLine();
+      NUMERO_AUX = entrada.nextLine();
       try {
         NUMERO = Integer.parseInt(NUMERO_AUX);
         break;
