@@ -17,12 +17,12 @@ func main() {
     fmt.Print("Entre uma cadeia alfabética: ")
     TEXTO, _ = entrada.ReadString('\n')
     TEXTO = strings.TrimSpace(TEXTO)
-    VALIDACAO = true
+    VALIDACAO = false
     for _, CARACTERE := range TEXTO {
-      if !((CARACTERE >= 'A' && CARACTERE <= 'Z') ||
-           (CARACTERE >= 'a' && CARACTERE <= 'z') ||
-            CARACTERE == ' ') {
-        VALIDACAO = false
+      if ((CARACTERE >= 'A' && CARACTERE <= 'Z') ||
+          (CARACTERE >= 'a' && CARACTERE <= 'z') ||
+           CARACTERE == ' ') {
+        VALIDACAO = true
         break
       }
     }
