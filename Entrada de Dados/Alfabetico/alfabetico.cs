@@ -15,7 +15,7 @@ class Program
       VALIDACAO = TEXTO.Any(CARACTERE => (CARACTERE >= 'A' && CARACTERE <= 'Z') || 
                                          (CARACTERE >= 'a' && CARACTERE <= 'z') || 
                                           CARACTERE == ' ');
-      if (!VALIDACAO)
+      if (VALIDACAO == false)
       {
         Console.WriteLine("Entrada invalida. Por favor, tente novamente.");
       }
