@@ -5,11 +5,12 @@ import (
   "fmt"
   "os"
   "strings"
+  "unicode"
 )
 
 func main() {
   entrada := bufio.NewReader(os.Stdin)
-  
+
   var TEXTO string
   var VALIDACAO bool
 
@@ -19,14 +20,12 @@ func main() {
     TEXTO = strings.TrimSpace(TEXTO)
     VALIDACAO = false
     for _, CARACTERE := range TEXTO {
-      if ((CARACTERE >= 'A' && CARACTERE <= 'Z') ||
-          (CARACTERE >= 'a' && CARACTERE <= 'z') ||
-           CARACTERE == ' ') {
+      if unicode.IsLetter(CARACTERE) || unicode.IsSpace(CARACTERE) {
         VALIDACAO = true
         break
       }
     }
-    if (VALIDACAO == false) {
+    if !VALIDACAO {
       fmt.Println("Entrada inválida. Por favor, tente novamente.")
     } else {
       break
