@@ -5,6 +5,7 @@ object Main {
 
     var TEXTO: String = ""
     var VALIDACAO: Boolean = false
+    var CARACTERE: Char = ' '
 
     while (true) {
       print("Entre uma cadeia alfabética: ")
@@ -12,7 +13,7 @@ object Main {
       VALIDACAO = true
 
       for (I <- 0 until TEXTO.length) {
-        val CARACTERE = TEXTO.charAt(I)
+        CARACTERE = TEXTO.charAt(I)
         if (!(CARACTERE.isLetter || CARACTERE.isWhitespace)) {
           VALIDACAO = false
         }
