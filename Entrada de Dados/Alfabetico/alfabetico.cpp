@@ -3,24 +3,15 @@
 
 using namespace std;
 
-string TEXTO;
-size_t I;
-bool VALIDACAO;
-
 int main() {
+  
+  string TEXTO;
+  bool VALIDACAO = false;
+
   do {
     cout << "Entre uma cadeia alfabetica: ";
     getline(cin, TEXTO);
-    VALIDACAO = true;
-    for (I = 0; I < TEXTO.length(); I++) {
-      char CARACTERE = TEXTO[I];
-      if (!((CARACTERE >= 'A' && CARACTERE <= 'Z') ||
-            (CARACTERE >= 'a' && CARACTERE <= 'z') ||
-             CARACTERE == ' ')) {
-        VALIDACAO = false;
-        break;
-      }
-    }
+    VALIDACAO = TEXTO.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ") == string::npos;
     if (VALIDACAO == false) {
       cout << "Entrada invalida. Por favor, tente novamente." << endl;
     } else {
