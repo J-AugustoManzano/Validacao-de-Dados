@@ -2,13 +2,13 @@ BEGIN {
   while (1) {
     printf("Entre uma cadeia alfabética: ")
     getline TEXTO
-    VALIDACAO = 1
+    VALIDACAO = 0
     for (I = 1; I <= length(TEXTO); I++) {
       CARACTERE = substr(TEXTO, I, 1)
-      if (!((CARACTERE >= "A" && CARACTERE <= "Z") || 
-            (CARACTERE >= "a" && CARACTERE <= "z") || 
-            CARACTERE == " ")) {
-        VALIDACAO = 0
+      if ((CARACTERE >= "A" && CARACTERE <= "Z") || 
+          (CARACTERE >= "a" && CARACTERE <= "z") || 
+           CARACTERE == " ") {
+        VALIDACAO = 1
         break
       }
     }
