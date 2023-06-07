@@ -9,21 +9,23 @@ begin
   repeat
     write('Entre uma cadeia alfabetica: ');
     readln(TEXTO);
-    VALIDACAO := true;
+    VALIDACAO := false;
     for I := 1 to length(TEXTO) do
     begin
-      if not ((TEXTO[I] >= 'A') and (TEXTO[I] <= 'Z')) and
-         not ((TEXTO[I] >= 'a') and (TEXTO[I] <= 'z')) and
-         not  (TEXTO[I] = ' ') then
+      if (TEXTO[I] in ['A'..'Z', 'a'..'z', ' ']) then
+      begin
+        VALIDACAO := true;
+      end
+      else
       begin
         VALIDACAO := false;
         break;
       end;
     end;
-    if (VALIDACAO = false) then
+    if (not VALIDACAO) then
       writeln('Entrada invalida. Por favor, tente novamente.')
     else
       break;
-  until (VALIDACAO = true);
+  until VALIDACAO;
   writeln('Voce informou a cadeia: ', TEXTO);
 end.
