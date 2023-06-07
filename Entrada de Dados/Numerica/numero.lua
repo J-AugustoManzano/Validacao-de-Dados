@@ -1,8 +1,8 @@
 local NUMERO = nil
 repeat
   io.write("Entre um numero: ")
-  local input = io.read("*l")
-  NUMERO = tonumber(input)
+  local entrada = io.read("*l")
+  NUMERO = tonumber(entrada)
   if (NUMERO == nil) then
     print("Entrada invalida. Por favor, tente novamente.")
   end
