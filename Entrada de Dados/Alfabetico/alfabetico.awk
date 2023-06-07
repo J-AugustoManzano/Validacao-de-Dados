@@ -1,8 +1,8 @@
 BEGIN {
-  printf("Entre uma cadeia alfabetica: ")
-  getline TEXTO
-  VALIDACAO = 1
   while (1) {
+    printf("Entre uma cadeia alfabética: ")
+    getline TEXTO
+    VALIDACAO = 1
     for (I = 1; I <= length(TEXTO); I++) {
       CARACTERE = substr(TEXTO, I, 1)
       if (!((CARACTERE >= "A" && CARACTERE <= "Z") || 
@@ -12,14 +12,10 @@ BEGIN {
         break
       }
     }
-    if (VALIDACAO == 0) {
-      printf("Entrada invalida. Por favor, tente novamente.\n")
-      printf("Entre uma cadeia alfabetica: ")
-      getline TEXTO
-      VALIDACAO = 1
-    } else {
+    if (VALIDACAO == 1) {
       break
     }
+    printf("Entrada inválida. Por favor, tente novamente.\n")
   }
-  printf("Voce informou a cadeia: %s\n", TEXTO)
+  printf("Você informou a cadeia: %s\n", TEXTO)
 }
