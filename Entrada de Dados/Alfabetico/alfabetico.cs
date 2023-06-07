@@ -1,32 +1,23 @@
 using System;
+using System.Linq;
 
 class Program
 {
   static void Main()
   {
-	  
     string TEXTO;
     bool VALIDACAO;
 
     do
     {
-      Console.Write("Entre uma cadeia alfabética: ");
+      Console.Write("Entre uma cadeia alfabetica: ");
       TEXTO = Console.ReadLine();
-      VALIDACAO = true;
-      for (int I = 0; I < TEXTO.Length; I++)
+      VALIDACAO = TEXTO.Any(CARACTERE => (CARACTERE >= 'A' && CARACTERE <= 'Z') || 
+                                         (CARACTERE >= 'a' && CARACTERE <= 'z') || 
+                                          CARACTERE == ' ');
+      if (!VALIDACAO)
       {
-        char CARACTERE = TEXTO[I];
-        if (!((CARACTERE >= 'A' && CARACTERE <= 'Z') ||
-              (CARACTERE >= 'a' && CARACTERE <= 'z') ||
-               CARACTERE == ' '))
-        {
-          VALIDACAO = false;
-          break;
-        }
-      }
-      if (VALIDACAO == false)
-      {
-        Console.WriteLine("Entrada inválida. Por favor, tente novamente.");
+        Console.WriteLine("Entrada invalida. Por favor, tente novamente.");
       }
       else
       {
@@ -34,6 +25,7 @@ class Program
       }
     }
     while (true);
-    Console.WriteLine("Você informou a cadeia: " + TEXTO);
+
+    Console.WriteLine("Voce informou a cadeia: " + TEXTO);
   }
 }
