@@ -8,25 +8,24 @@ public class Main {
 
     Scanner entrada = new Scanner(System.in);
     do {
-      System.out.print("Entre uma cadeia alfabética: ");
+      System.out.print("Entre uma cadeia alfabetica: ");
       TEXTO = entrada.nextLine();
-      VALIDACAO = true;
+      VALIDACAO = false;
       for (int I = 0; I < TEXTO.length(); I++) {
         char CARACTERE = TEXTO.charAt(I);
-        if (!((CARACTERE >= 'A' && CARACTERE <= 'Z') ||
-              (CARACTERE >= 'a' && CARACTERE <= 'z') ||
-               CARACTERE == ' ')) {
-          VALIDACAO = false;
+        if (Character.isLetter(CARACTERE) && CARACTERE != ' ') {
+          VALIDACAO = true;
           break;
         }
       }
       if (VALIDACAO == false) {
-        System.out.println("Entrada inválida. Por favor, tente novamente.");
+        System.out.println("Entrada invalida. Por favor, tente novamente.");
       } else {
         break;
       }
     } while (true);
+    
     entrada.close();
-    System.out.println("Você informou a cadeia: " + TEXTO);
+    System.out.println("Voce informou a cadeia: " + TEXTO);
   }
 }
