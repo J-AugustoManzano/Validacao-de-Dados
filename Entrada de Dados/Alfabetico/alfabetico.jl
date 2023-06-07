@@ -6,12 +6,12 @@ function validarCadeiaAlfabetica()
     print("Entre uma cadeia alfabética: ")
     TEXTO = readline()
     TEXTO = strip(TEXTO)
-    VALIDACAO = true
+    VALIDACAO = false
     for CARACTERE in TEXTO
-      if !(('A' <= CARACTERE <= 'Z') || 
-           ('a' <= CARACTERE <= 'z') || 
-                  (CARACTERE == ' '))
-        VALIDACAO = false
+      if (('A' <= CARACTERE <= 'Z') || 
+          ('a' <= CARACTERE <= 'z') || 
+                 (CARACTERE == ' '))
+        VALIDACAO = true
         break
       end
     end
