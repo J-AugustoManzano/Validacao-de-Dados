@@ -21,5 +21,4 @@ repeat
     print("Entrada invalida. Por favor, tente novamente.")
   end
 until VALIDACAO
-
 print("Voce informou a cadeia: " .. TEXTO)
