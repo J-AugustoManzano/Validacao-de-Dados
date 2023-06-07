@@ -8,21 +8,19 @@ object Main {
     var CARACTERE: Char = ' '
 
     while (true) {
-      print("Entre uma cadeia alfabética: ")
+      print("Entre uma cadeia alfabEtica: ")
       TEXTO = readLine()
-      VALIDACAO = true
-
+      VALIDACAO = false
       for (I <- 0 until TEXTO.length) {
         CARACTERE = TEXTO.charAt(I)
-        if (!(CARACTERE.isLetter || CARACTERE.isWhitespace)) {
-          VALIDACAO = false
+        if (CARACTERE.isLetter || CARACTERE.isWhitespace) {
+          VALIDACAO = true
         }
       }
-
       if (VALIDACAO == false) {
-        println("Entrada inválida. Por favor, tente novamente.")
+        println("Entrada invAlida. Por favor, tente novamente.")
       } else {
-        println(s"Você informou a cadeia: $TEXTO")
+        println(s"VocE informou a cadeia: $TEXTO")
         return
       }
     }
