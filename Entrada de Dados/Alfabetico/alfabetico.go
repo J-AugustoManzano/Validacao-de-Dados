@@ -8,14 +8,14 @@ import (
 )
 
 func main() {
-  reader := bufio.NewReader(os.Stdin)
+  entrada := bufio.NewReader(os.Stdin)
   
   var TEXTO string
   var VALIDACAO bool
 
   for {
     fmt.Print("Entre uma cadeia alfabética: ")
-    TEXTO, _ = reader.ReadString('\n')
+    TEXTO, _ = entrada.ReadString('\n')
     TEXTO = strings.TrimSpace(TEXTO)
     VALIDACAO = true
     for _, CARACTERE := range TEXTO {
