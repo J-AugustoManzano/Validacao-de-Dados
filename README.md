@@ -12,3 +12,11 @@ Os programas aqui apresentados podem ser executados nos serviços Web:
 - [Tutorialpoint Online Compilers and Interpreters](https://www.tutorialspoint.com/codingground.htm).
 
 Não tenho a intenção de que os programas aqui publicados sejam as melhores ou as mais adequadas soluções. São apenas possíveis soluções funcionais, não as melhores soluções. Este material é exclusivamente direciado para um público iniciante na ciência da programação de computadores.
+
+São dipsonibilizados neste repositório, até o momento, exemplos de:
+
+- Conversão de Maiúsculos e Minúsculos
+- Conversões de Bases
+- Dígito Verificador
+- Entarda de Dados
+- Formatação de Milhares
