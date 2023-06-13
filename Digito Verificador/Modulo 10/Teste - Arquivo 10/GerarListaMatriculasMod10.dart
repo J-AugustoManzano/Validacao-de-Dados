@@ -1,41 +1,41 @@
 import 'dart:io';
 
-String formataMatricula(int matricula) {
-  return matricula.toString().padLeft(6, '0');
+String formataMatricula(int MATRICULA) {
+  return MATRICULA.toString().padLeft(6, '0');
 }
 
-int mod10(String matricula) {
-  int soma = 0;
-  for (int i = 0; i < 6; i++) {
-    int digito = int.parse(matricula[i]);
-    if (i % 2 != 0 && digito * 2 > 9)
-      soma += digito * 2 - 9;
-    else if (i % 2 != 0 && digito * 2 <= 9)
-      soma += digito * 2;
+int mod10(String MATRICULA) {
+  int SOMA = 0;
+  for (int I = 0; I <= 5; I++) {
+    int DIGITO = int.parse(MATRICULA[I]);
+    if (I % 2 != 0 && DIGITO * 2 > 9)
+      SOMA += DIGITO * 2 - 9;
+    else if (I % 2 != 0 && DIGITO * 2 <= 9)
+      SOMA += DIGITO * 2;
     else
-      soma += digito;
+      SOMA += DIGITO;
   }
-  int dv = (soma % 10 == 0) ? 0 : 10 - soma % 10;
-  return dv;
+  int DV = (SOMA % 10 == 0) ? 0 : 10 - SOMA % 10;
+  return DV;
 }
 
 void main() async {
-  var arquivo = File('numeros.txt').openWrite();
+  var ARQUIVO = File('numeros.txt').openWrite();
 
   stdout.writeln("GERADOR DE NUMEROS DE MATRICULA DE 000.000 ATE 999.999 COM \"DV\"");
   stdout.writeln("Padrao: Modulo 10");
   stdout.writeln("---------------------------------------------------------------");
   stdout.writeln();
 
-  stdout.write("Aguarde arquivo sendo gerado... ");
+  stdout.write("Aguarde ARQUIVO sendo gerado... ");
 
-  for (int i = 0; i <= 999999; i++) {
-    String matricula = formataMatricula(i);
-    int dv = mod10(matricula);
-    arquivo.writeln('${matricula.substring(0, 3)}.${matricula.substring(3)}-$dv');
+  for (int I = 0; I <= 999999; I++) {
+    String MATRICULA = formataMatricula(I);
+    int DV = mod10(MATRICULA);
+    ARQUIVO.writeln('${MATRICULA.substring(0, 3)}.${MATRICULA.substring(3)}-$DV');
   }
 
-  await arquivo.close();
+  await ARQUIVO.close();
 
   stdout.writeln("\n\nSUCESSO: Arquivo gerado.\n");
 }
