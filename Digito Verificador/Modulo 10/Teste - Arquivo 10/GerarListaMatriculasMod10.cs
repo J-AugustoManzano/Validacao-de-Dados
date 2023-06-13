@@ -3,54 +3,54 @@ using System.IO;
 
 class Program
 {
-    static string FormataMatricula(int matricula)
+    static string FormataMatricula(int MATRICULA)
     {
-        return matricula.ToString("D6");
+        return MATRICULA.ToString("D6");
     }
 
-    static int Mod10(string matricula)
+    static int Mod10(string MATRICULA)
     {
-        int soma = 0;
-        for (int i = 0; i < 6; i++)
+        int SOMA = 0;
+        for (int I = 0; I <= 5; I++)
         {
-            int digito = matricula[i] - '0';
-            if (i % 2 != 0 && digito * 2 > 9)
-                soma += digito * 2 - 9;
-            else if (i % 2 != 0 && digito * 2 <= 9)
-                soma += digito * 2;
+            int DIGITO = MATRICULA[I] - '0';
+            if (I % 2 != 0 && DIGITO * 2 > 9)
+                SOMA += DIGITO * 2 - 9;
+            else if (I % 2 != 0 && DIGITO * 2 <= 9)
+                SOMA += DIGITO * 2;
             else
-                soma += digito;
+                SOMA += DIGITO;
         }
-        int dv = (soma % 10 == 0) ? 0 : 10 - soma % 10;
-        return dv;
+        int DV = (SOMA % 10 == 0) ? 0 : 10 - SOMA % 10;
+        return DV;
     }
 
     static void Main(string[] args)
     {
-        StreamWriter arquivo = new StreamWriter("numeros.txt");
+        StreamWriter ARQUIVO = new StreamWriter("numeros.txt");
 
         Console.WriteLine("GERADOR DE NUMEROS DE MATRICULA DE 000.000 ATE 999.999 COM \"DV\"");
         Console.WriteLine("Padrao: Modulo 10");
         Console.WriteLine("---------------------------------------------------------------");
         Console.WriteLine();
 
-        if (arquivo == null)
+        if (ARQUIVO == null)
         {
-            Console.Error.WriteLine("Erro ao abrir o arquivo.");
+            Console.Error.WriteLine("Erro ao abrir o ARQUIVO.");
             Console.WriteLine("Programa encerrado.");
             return;
         }
 
-        Console.Write("Aguarde arquivo sendo gerado... ");
+        Console.Write("Aguarde ARQUIVO sendo gerado... ");
 
-        for (int i = 0; i <= 999999; i++)
+        for (int I = 0; I <= 999999; I++)
         {
-            string matricula = FormataMatricula(i);
-            int dv = Mod10(matricula);
-            arquivo.WriteLine($"{matricula.Substring(0, 3)}.{matricula.Substring(3)}-{dv}");
+            string MATRICULA = FormataMatricula(I);
+            int DV = Mod10(MATRICULA);
+            ARQUIVO.WriteLine($"{MATRICULA.Substring(0, 3)}.{MATRICULA.Substring(3)}-{DV}");
         }
 
-        arquivo.Close();
+        ARQUIVO.Close();
 
         Console.WriteLine("\n\nSUCESSO: Arquivo gerado.\n");
     }
