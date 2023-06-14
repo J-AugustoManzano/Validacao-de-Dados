@@ -113,7 +113,7 @@ begin
 
   NUMERO_SMASC := RemoverMascara(NUMERO);
   DV := GerarVerhoeff(NUMERO_SMASC);
-  Writeln('DIGITO verificador: ', DV);
+  Writeln('Digito verificador: ', DV);
   Writeln;
 
   EntradaValida := False;
