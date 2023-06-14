@@ -73,7 +73,7 @@ begin
     Exit;
   end;
 
-  Write('Aguarde ARQUIVO sendo gerado... ');
+  Writeln('Aguarde ARQUIVO sendo gerado... ');
 
   for I := 0 to 999999 do
   begin
