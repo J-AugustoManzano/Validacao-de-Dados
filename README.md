@@ -6,7 +6,7 @@ Muitas operações podem estar disponibilizadas de forma pronta em bibliotecas, 
 
 É importante ressaltar que os programas fornecidos aqui são apenas exemplos e foram escritos de maneira simplista, com o objetivo primordial de auxiliar iniciantes no aprendizado. Para utilização profissional, é necessário adotar um nível mais elevado de cuidado e atentar para outros aspectos de implementação e elaboração.
 
-Os programas aqui apresentados podem ser executados nos serviços Web:
+Esses programas podem ser executados em serviços online, como:
 
 - [Replit](https://replit.com/);
 - [Tutorialpoint Online Compilers and Interpreters](https://www.tutorialspoint.com/codingground.htm).
