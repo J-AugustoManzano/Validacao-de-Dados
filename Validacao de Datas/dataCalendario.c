@@ -4,9 +4,9 @@
 
 struct Data
 {
-  short dia;
-  short mes;
-  short ano;
+  short dia = 0;
+  short mes = 0;
+  short ano = 0;
   bool ok = false;
 };
 
