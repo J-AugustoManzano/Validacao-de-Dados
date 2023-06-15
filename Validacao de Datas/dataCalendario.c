@@ -7,7 +7,7 @@ struct Data
   short dia;
   short mes;
   short ano;
-  bool ok;
+  bool ok = false;
 };
 
 bool anoBissexto(const struct Data data)
