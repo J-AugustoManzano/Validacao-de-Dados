@@ -10,6 +10,8 @@ struct Data
 
 class Program
 {
+    Data exemplo = new Data { dia = 0, mes = 0, ano = 0, ok = false };
+    
     static int StrToInt(string cadeia)
     {
         int valor = 0;
