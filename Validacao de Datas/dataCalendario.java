@@ -5,6 +5,12 @@ class Data {
     short   mes;
     short   ano;
     boolean ok;
+    Data() {
+        dia = 0;
+        mes = 0;
+        ano = 0;
+        ok = false;
+    }
 }
 
 public class Main {
