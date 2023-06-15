@@ -5,6 +5,7 @@ class Data {
   late int mes;
   late int ano;
   late bool ok;
+  Data({this.dia = 0, this.mes = 0, this.ano = 0, this.ok = false});
 }
 
 int StrToInt(String cadeia) {
