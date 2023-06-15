@@ -122,6 +122,10 @@ begin
 end;
 
 begin
+  data.dia := 0;
+  data.mes := 0;
+  data.ano := 0;
+  data.ok := false;
   writeln('TESTE DE VALIDACAO DE DATA (CALENDARIO)');
   writeln('=======================================');
   writeln;
