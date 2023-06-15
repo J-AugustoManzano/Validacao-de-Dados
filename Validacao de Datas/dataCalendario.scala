@@ -1,10 +1,10 @@
 import scala.io.StdIn.readLine
 
 case class Data(
-  var dia: Short, 
-  var mes: Short, 
-  var ano: Short, 
-  var ok:  Boolean
+  var dia: Short = 0, 
+  var mes: Short = 0, 
+  var ano: Short = 0, 
+  var ok:  Boolean = false
 )
 
 object Main {
