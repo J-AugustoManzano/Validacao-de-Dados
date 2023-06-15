@@ -15,7 +15,7 @@ São dipsonibilizados neste repositório, até o momento, exemplos de:
 
 - Conversão de Maiúsculos e Minúsculos
 - Conversões de Bases (Binária, Decimal, Hexadecimal)
-- Dígito Verificador
+- Dígito Verificador (Alguns Algoritmos)
 - Entrada de Dados (Numérica, Alfabética e Alfanumérica)
 - Formatação de Milhares
 - Validação de Datas (Calendário)
