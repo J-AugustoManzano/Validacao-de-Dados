@@ -14,7 +14,7 @@ Esses programas podem ser executados em serviços online, como:
 São dipsonibilizados neste repositório, até o momento, exemplos de:
 
 - Conversão de Maiúsculos e Minúsculos
-- Conversões de Bases
+- Conversões de Bases (Binária, Decimal, Hexadecimal)
 - Dígito Verificador
 - Entrada de Dados (Numérica, Alfabética e Alfanumérica)
 - Formatação de Milhares
