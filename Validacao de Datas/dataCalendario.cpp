@@ -7,7 +7,7 @@ struct Data
     short dia;
     short mes;
     short ano;
-    bool  ok;
+    bool  ok = false;
 };
 
 int StrToInt(const string& cadeia)
