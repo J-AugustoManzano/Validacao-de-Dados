@@ -18,6 +18,7 @@ São dipsonibilizados neste repositório, até o momento, exemplos de:
 - Dígito Verificador (Alguns Algoritmos)
 - Entrada de Dados (Numérica, Alfabética e Alfanumérica)
 - Formatação de Milhares
+- Números Pseudo Aleatórios
 - Validação de Datas (Calendário)
 
 Não tenho a intenção de que os programas aqui publicados sejam as melhores ou as mais adequadas soluções. São apenas possíveis soluções funcionais, não as melhores soluções. Este material é exclusivamente direciado para um público iniciante na ciência da programação de computadores.
