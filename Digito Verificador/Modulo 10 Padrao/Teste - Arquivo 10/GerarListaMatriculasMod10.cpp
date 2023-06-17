@@ -45,7 +45,7 @@ int main(void) {
   
   for (I = 0; I <= 999999; I++) {
     MATRICULA = formataMatricula(I);
-    DV = MOD10(MATRICULA);
+    DV = mod10(MATRICULA);
     ARQUIVO << MATRICULA.substr(0, 3) << "." << MATRICULA.substr(3) << "-" << DV << endl;
   }
   
