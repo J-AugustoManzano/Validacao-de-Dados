@@ -69,10 +69,10 @@ public:
 
 int main() {
 	
-  MT19937 rng1, rng2;
+  MT19937 Xn1, Xn2;
   
-  rng1.initialize(1234);
-  rng2.initialize(static_cast<uint32_t>(time(NULL)));
+  Xn1.initialize(1234);
+  Xn2.initialize(static_cast<uint32_t>(time(NULL)));
 
   std::cout << "GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)" << std::endl;
   std::cout << "PSEUDORANDOM NUMBER GENERATOR (PRNG)" << std::endl;
@@ -82,8 +82,8 @@ int main() {
   std::cout << "    -------------        -------------" << std::endl << std::endl;
 
   for (int i = 0; i <= 9; i++) {
-    std::cout << std::setw(17) << rng1.generateRandomNumber();
-    std::cout << std::setw(21) << rng2.generateRandomNumber();
+    std::cout << std::setw(17) << Xn1.generateRandomNumber();
+    std::cout << std::setw(21) << Xn2.generateRandomNumber();
     std::cout << std::endl;
   }
 

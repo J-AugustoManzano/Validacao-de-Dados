@@ -64,10 +64,10 @@ uint32_t temper(MT19937 *rng) {
 
 int main(void) {
 	
-  MT19937 rng1, rng2;
+  MT19937 Xn1, Xn2;
   
-  initialize(&rng1, 1234);
-  initialize(&rng2, (uint32_t)time(NULL));
+  initialize(&Xn1, 1234);
+  initialize(&Xn2, (uint32_t)time(NULL));
 
   printf("GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)\n");
   printf("PSEUDORANDOM NUMBER GENERATOR (PRNG)\n");
@@ -77,7 +77,7 @@ int main(void) {
   printf("    -------------        -------------\n\n");
 
   for (int i = 0; i <= 9; i++) {
-    printf("       %10u           %10u\n", temper(&rng1), temper(&rng2));
+    printf("       %10u           %10u\n", temper(&Xn1), temper(&Xn2));
   }
 
   return 0;

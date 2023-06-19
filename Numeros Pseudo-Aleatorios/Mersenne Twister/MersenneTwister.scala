@@ -61,11 +61,11 @@ object Main {
       }
     }
 
-    val rng1: MT19937 = new MT19937
-    val rng2: MT19937 = new MT19937
+    val Xn1: MT19937 = new MT19937
+    val Xn2: MT19937 = new MT19937
 
-    rng1.initialize(1234)
-    rng2.initialize(System.currentTimeMillis().toInt)
+    Xn1.initialize(1234)
+    Xn2.initialize(System.currentTimeMillis().toInt)
 
     println("GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)")
     println("PSEUDORANDOM NUMBER GENERATOR (PRNG)")
@@ -75,8 +75,8 @@ object Main {
     println("    -------------        -------------\n")
 
     for (_ <- 0 to 9) {
-      print(f"${rng1.generateRandomNumber()}%17s")
-      print(f"${rng2.generateRandomNumber()}%21s")
+      print(f"${Xn1.generateRandomNumber()}%17s")
+      print(f"${Xn2.generateRandomNumber()}%21s")
       println()
     }
   }

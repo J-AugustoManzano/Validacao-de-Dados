@@ -62,11 +62,11 @@ public class Main {
 
     public static void main(String[] args) {
 		
-        MT19937 rng1 = new MT19937();
-        MT19937 rng2 = new MT19937();
+        MT19937 Xn1 = new MT19937();
+        MT19937 Xn2 = new MT19937();
 
-        rng1.initialize(1234);
-        rng2.initialize((int) System.currentTimeMillis());
+        Xn1.initialize(1234);
+        Xn2.initialize((int) System.currentTimeMillis());
 
         System.out.println("GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)");
         System.out.println("PSEUDORANDOM NUMBER GENERATOR (PRNG)");
@@ -76,8 +76,8 @@ public class Main {
         System.out.println("    -------------        -------------\n");
 
         for (int i = 0; i <= 9; i++) {
-            System.out.printf("%17s", rng1.generateRandomNumber());
-            System.out.printf("%21s\n", rng2.generateRandomNumber());
+            System.out.printf("%17s", Xn1.generateRandomNumber());
+            System.out.printf("%21s\n", Xn2.generateRandomNumber());
         }
         
     }

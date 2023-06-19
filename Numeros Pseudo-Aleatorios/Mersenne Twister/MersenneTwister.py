@@ -47,11 +47,11 @@ class MT19937:
         self.cnt += 1
         return y
 
-rng1 = MT19937()
-rng2 = MT19937()
+Xn1 = MT19937()
+Xn2 = MT19937()
 
-rng1.initialize(1234)
-rng2.initialize(int(time.time()))
+Xn1.initialize(1234)
+Xn2.initialize(int(time.time()))
 
 print("GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)")
 print("PSEUDORANDOM NUMBER GENERATOR (PRNG)")
@@ -62,4 +62,4 @@ print("{:>17} {:>21}".format("Semente: 1234", "Semente: TIME"))
 print("    -------------        -------------\n")
 
 for _ in range(10):
-    print("{:>17} {:>21}".format(rng1.generate_random_number(), rng2.generate_random_number()))
+    print("{:>17} {:>21}".format(Xn1.generate_random_number(), Xn2.generate_random_number()))

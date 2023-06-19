@@ -74,14 +74,14 @@ begin
 end;
 
 var
-  rng1, rng2: MT19937;
+  Xn1, Xn2: MT19937;
   i: Integer;
   rng1Value, rng2Value: String;
 
 begin
 
-  initialize(rng1, 1234);
-  initialize(rng2, UInt32(DateTimeToUnix(Now)));
+  initialize(Xn1, 1234);
+  initialize(Xn2, UInt32(DateTimeToUnix(Now)));
 
   WriteLn('GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)');
   WriteLn('PSEUDORANDOM NUMBER GENERATOR (PRNG)');
@@ -94,8 +94,8 @@ begin
 
   for i := 1 to 10 do
   begin
-    rng1Value := IntToStr(temper(rng1));
-    rng2Value := IntToStr(temper(rng2));
+    rng1Value := IntToStr(temper(Xn1));
+    rng2Value := IntToStr(temper(Xn2));
     Write('       ');
     Write(Format('%11s', [rng1Value]));
     Write('         ');

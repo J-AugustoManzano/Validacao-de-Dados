@@ -74,11 +74,11 @@ public class Program
     public static void Main(string[] args)
     {
 		
-        MT19937 rng1 = new MT19937();
-        MT19937 rng2 = new MT19937();
+        MT19937 Xn1 = new MT19937();
+        MT19937 Xn2 = new MT19937();
 
-        rng1.Initialize(1234);
-        rng2.Initialize((int)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
+        Xn1.Initialize(1234);
+        Xn2.Initialize((int)DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
 
         Console.WriteLine("GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)");
         Console.WriteLine("PSEUDORANDOM NUMBER GENERATOR (PRNG)");
@@ -89,8 +89,8 @@ public class Program
 
         for (int i = 0; i < 10; i++)
         {
-            Console.Write($"{rng1.GenerateRandomNumber(),17}");
-            Console.WriteLine($"{rng2.GenerateRandomNumber(),21}");
+            Console.Write($"{Xn1.GenerateRandomNumber(),17}");
+            Console.WriteLine($"{Xn2.GenerateRandomNumber(),21}");
         }
     }
     

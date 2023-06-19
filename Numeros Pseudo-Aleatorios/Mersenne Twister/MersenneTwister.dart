@@ -63,10 +63,10 @@ class MT19937 {
 
 void main() {
 	
-  MT19937 rng1 = MT19937();
-  MT19937 rng2 = MT19937();
+  MT19937 Xn1 = MT19937();
+  MT19937 Xn2 = MT19937();
 
-  rng1.initialize(1234);
+  Xn1.initialize(1234);
 
   print("GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)");
   print("PSEUDORANDOM NUMBER GENERATOR (PRNG)");
@@ -76,9 +76,9 @@ void main() {
   print("    -------------        -------------\n");
 
   for (int i = 0; i < 10; i++) {
-    rng2.initialize(DateTime.now().millisecondsSinceEpoch);
-    stdout.write('${rng1.generateRandomNumber().toString().padLeft(17)}');
-    print('${rng2.generateRandomNumber().toString().padLeft(21)}');
+    Xn2.initialize(DateTime.now().millisecondsSinceEpoch);
+    stdout.write('${Xn1.generateRandomNumber().toString().padLeft(17)}');
+    print('${Xn2.generateRandomNumber().toString().padLeft(21)}');
   }
   
 }

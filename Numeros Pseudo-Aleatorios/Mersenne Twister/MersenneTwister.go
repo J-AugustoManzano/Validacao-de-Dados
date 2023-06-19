@@ -63,10 +63,10 @@ func (mt *MT19937) generateRandomNumber() uint32 {
 }
 
 func main() {
-	var rng1, rng2 MT19937
+	var Xn1, Xn2 MT19937
 
-	rng1.initialize(1234)
-	rng2.initialize(uint32(time.Now().Unix()))
+	Xn1.initialize(1234)
+	Xn2.initialize(uint32(time.Now().Unix()))
 
 	fmt.Println("GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)")
 	fmt.Println("PSEUDORANDOM NUMBER GENERATOR (PRNG)")
@@ -77,6 +77,6 @@ func main() {
 	fmt.Println("    -------------        -------------\n")
 
 	for i := 0; i <= 9; i++ {
-		fmt.Printf("%17d %21d\n", rng1.generateRandomNumber(), rng2.generateRandomNumber())
+		fmt.Printf("%17d %21d\n", Xn1.generateRandomNumber(), Xn2.generateRandomNumber())
 	}
 }
