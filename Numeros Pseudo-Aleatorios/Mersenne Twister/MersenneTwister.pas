@@ -1,6 +1,6 @@
 {*
- * PRNG .......: Mersenne Twister (MT)
- * Ano ........: 1998
+ * PRNG .......: Mersenne Twister (MT 19937)
+ * Ano ........: 2007
  * Autor ......: Makoto Matsumoto & Takuji Nishimura
  *}
 
