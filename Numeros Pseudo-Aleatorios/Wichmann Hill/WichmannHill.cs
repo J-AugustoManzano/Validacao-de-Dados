@@ -25,27 +25,27 @@ class Program
         Console.WriteLine("    -------------        -------------\n");
 
         int i;
-        double[] semente1234 = new double[10];
-        double[] sementeTime = new double[10];
+        double[] Xn1 = new double[10];
+        double[] Xn2 = new double[10];
         int X1, X2;
 
         X1 = 1234;
         for (i = 0; i <= 9; i++)
         {
-            semente1234[i] = WichmannHill(ref X1);
+            Xn1[i] = WichmannHill(ref X1);
         }
 
         X2 = (int)DateTime.Now.Ticks;
         for (i = 0; i <= 9; i++)
         {
-            sementeTime[i] = WichmannHill(ref X2);
+            Xn2[i] = WichmannHill(ref X2);
         }
 
         for (i = 0; i <= 9; i++)
         {
-            Console.Write(semente1234[i].ToString("F11").PadLeft(17));
+            Console.Write(Xn1[i].ToString("F11").PadLeft(17));
             Console.Write("    ");
-            Console.WriteLine(sementeTime[i].ToString("F11").PadLeft(17));
+            Console.WriteLine(Xn2[i].ToString("F11").PadLeft(17));
         }
     }
     

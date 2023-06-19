@@ -17,8 +17,8 @@ end;
 
 var
   i: Integer;
-  semente1234: array[1..10] of Double;
-  sementeTime: array[1..10] of Double;
+  Xn1: array[1..10] of Double;
+  Xn2: array[1..10] of Double;
   X1, X2: Integer;
 
 begin
@@ -33,16 +33,16 @@ begin
   X1 := 1234;
   for i := 1 to 10 do
   begin
-    semente1234[i] := WichmannHill(X1);
+    Xn1[i] := WichmannHill(X1);
   end;
 
   X2 := UInt32(DateTimeToUnix(Now));
   for i := 1 to 10 do
   begin
-    sementeTime[i] := WichmannHill(X2);
+    Xn2[i] := WichmannHill(X2);
   end;
 
   for i := 1 to 10 do
-    writeln(semente1234[i]:17:11, '        ', sementeTime[i]:13:11);
+    writeln(Xn1[i]:17:11, '        ', Xn2[i]:13:11);
 
 end.

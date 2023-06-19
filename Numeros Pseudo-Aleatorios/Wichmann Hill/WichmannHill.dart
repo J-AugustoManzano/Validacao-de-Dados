@@ -23,22 +23,22 @@ void main() {
   int X1 = 1234;
   int X2 = DateTime.now().millisecondsSinceEpoch;
 
-  List<double> semente1234 = [];
+  List<double> Xn1 = [];
   for (int i = 0; i <= 9; i++) {
-    semente1234.add(WichmannHill(X1));
+    Xn1.add(WichmannHill(X1));
     X1 = (171 * X1) % 30269;
   }
 
-  List<double> sementeTime = [];
+  List<double> Xn2 = [];
   for (int i = 0; i <= 9; i++) {
-    sementeTime.add(WichmannHill(X2));
+    Xn2.add(WichmannHill(X2));
     X2 = (171 * X2) % 30269;
   }
 
   for (int i = 0; i <= 9; i++) {
-    stdout.write(semente1234[i].toStringAsFixed(11).padLeft(17));
+    stdout.write(Xn1[i].toStringAsFixed(11).padLeft(17));
     stdout.write("        ");
-    stdout.write(sementeTime[i].toStringAsFixed(11).padLeft(13));
+    stdout.write(Xn2[i].toStringAsFixed(11).padLeft(13));
     stdout.write('\n');
   }
 }

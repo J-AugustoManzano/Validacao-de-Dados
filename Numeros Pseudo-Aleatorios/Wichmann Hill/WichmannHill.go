@@ -26,22 +26,22 @@ func main() {
 	fmt.Println("    Semente: 1234        Semente: TIME")
 	fmt.Println("    -------------        -------------")
 
-	var semente1234 [10]float64
-	var sementeTime [10]float64
+	var Xn1 [10]float64
+	var Xn2 [10]float64
 	var X1, X2 int
 
 	X1 = 1234
 	for i := 0; i <= 9; i++ {
-		semente1234[i] = WichmannHill(&X1)
+		Xn1[i] = WichmannHill(&X1)
 	}
 
 	X2 = int(time.Now().Unix())
 	for i := 0; i <= 9; i++ {
-		sementeTime[i] = WichmannHill(&X2)
+		Xn2[i] = WichmannHill(&X2)
 	}
 
 	for i := 0; i <= 9; i++ {
-		fmt.Printf("%17.11f        ", semente1234[i])
-		fmt.Printf("%13.11f\n", sementeTime[i])
+		fmt.Printf("%17.11f        ", Xn1[i])
+		fmt.Printf("%13.11f\n", Xn2[i])
 	}
 }

@@ -1,46 +1,33 @@
-/*
- * PRNG .......: Wichmann Hill
- * Ano ........: 1982
- * Autor ......: Brian A. Wichmann & David H. Hill
- */
- 
-import scala.util.Random
+import java.util.Date
 
 object Main {
-	
-  def WichmannHill(X: Int): Double = {
-    val newX = (171 * X) % 30269
-    math.abs(newX.toDouble / 30269.0)
+  
+  def WichmannHill(X: Array[Int]): Double = {
+    X(0) = (171 * X(0)) % 30269
+    Math.abs(X(0) / 30269.0)
   }
 
   def main(args: Array[String]): Unit = {
+    
     println("GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)")
     println("PSEUDORANDOM NUMBER GENERATOR (PRNG)")
     println("PADRAO: Wichmann Hill")
-    println("==========================================")
-    println()
+    println("==========================================\n")
+
     println("    Semente: 1234        Semente: TIME")
-    println("    -------------        -------------")
+    println("    -------------        -------------\n")
 
-    var i: Int = 0
-    val semente1234: Array[Double] = new Array[Double](10)
-    val sementeTime: Array[Double] = new Array[Double](10)
-
-    var X1: Int = 1234
-    for (i <- 0 to 9) {
-      semente1234(i) = WichmannHill(X1)
-      X1 = (171 * X1) % 30269
-    }
-
-    var X2: Int = System.currentTimeMillis.toInt
-    for (i <- 0 to 9) {
-      sementeTime(i) = WichmannHill(X2)
-      X2 = (171 * X2) % 30269
-    }
+    val X1: Array[Int] = Array(1234)
+    val X2: Array[Int] = Array(new Date().getTime.toInt)
+    var Xn1 = .0
+    var Xn2 = .0
 
     for (i <- 0 to 9) {
-      printf("%17.11f        %13.11f\n", semente1234(i), sementeTime(i))
+      Xn1 = WichmannHill(X1)
+      Xn2 = WichmannHill(X2)
+      printf("%17.11f        %17.11f%n", Xn1, Xn2)
     }
+    
   }
   
 }

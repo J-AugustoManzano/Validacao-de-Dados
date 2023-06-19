@@ -23,25 +23,25 @@ int main() {
   std::cout << "    -------------        -------------" << std::endl;
 
   int i;
-  double semente1234[10];
-  double sementeTime[10];
+  double Xn1[10];
+  double Xn2[10];
   int X1, X2;
 
   X1 = 1234;
   for (i = 0; i <= 9; i++) {
-    semente1234[i] = WichmannHill(X1);
+    Xn1[i] = WichmannHill(X1);
   }
 
   X2 = static_cast<int>(std::time(NULL));
   for (i = 0; i <= 9; i++) {
-    sementeTime[i] = WichmannHill(X2);
+    Xn2[i] = WichmannHill(X2);
   }
 
   for (i = 0; i <= 9; i++) {
     std::cout.precision(11);
-    std::cout << std::fixed << std::setw(17) << semente1234[i] << "        ";
+    std::cout << std::fixed << std::setw(17) << Xn1[i] << "        ";
     std::cout.precision(11);
-    std::cout << std::fixed << std::setw(13) << sementeTime[i] << std::endl;
+    std::cout << std::fixed << std::setw(13) << Xn2[i] << std::endl;
   }
 
   return 0;

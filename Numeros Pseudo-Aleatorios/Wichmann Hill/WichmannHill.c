@@ -23,22 +23,22 @@ int main() {
   printf("    -------------        -------------\n");
 
   int i;
-  double semente1234[10];
-  double sementeTime[10];
+  double Xn1[10];
+  double Xn2[10];
   int X1, X2;
 
   X1 = 1234;
   for (i = 0; i <= 9; i++) {
-    semente1234[i] = WichmannHill(&X1);
+    Xn1[i] = WichmannHill(&X1);
   }
 
   X2 = (int)time(NULL);
   for (i = 0; i <= 9; i++) {
-    sementeTime[i] = WichmannHill(&X2);
+    Xn2[i] = WichmannHill(&X2);
   }
 
   for (i = 0; i <= 9; i++) {
-    printf("%17.11lf        %13.11lf\n", semente1234[i], sementeTime[i]);
+    printf("%17.11lf        %13.11lf\n", Xn1[i], Xn2[i]);
   }
 
   return 0;
