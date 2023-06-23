@@ -28,16 +28,11 @@ int main(void) {
   printf("    -------------        -------------\n");
 
   X1 = 1234;
+  X2 = (unsigned int)time(NULL);
+
   for (int i = 0; i <= 9; i++) {
     Xn1[i] = BlumBlumShub(&X1);
-  }
-
-  X2 = (unsigned int)time(NULL);
-  for (int i = 0; i <= 9; i++) {
     Xn2[i] = BlumBlumShub(&X2);
-  }
-
-  for (int i = 0; i <= 9; i++) {
     printf("%17u        %13u\n", Xn1[i], Xn2[i]);
   }
 
