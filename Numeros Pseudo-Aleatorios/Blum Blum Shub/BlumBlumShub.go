@@ -30,16 +30,11 @@ func main() {
 	fmt.Println("    -------------        -------------\n")
 
 	X1 = 1234
+	X2 = uint32(time.Now().Unix())
+
 	for i := 0; i <= 9; i++ {
 		Xn1[i] = BlumBlumShub(&X1)
-	}
-
-	X2 = uint32(time.Now().Unix())
-	for i := 0; i <= 9; i++ {
 		Xn2[i] = BlumBlumShub(&X2)
-	}
-
-	for i := 0; i <= 9; i++ {
 		fmt.Printf("%17d        %13d\n", Xn1[i], Xn2[i])
 	}
 	
