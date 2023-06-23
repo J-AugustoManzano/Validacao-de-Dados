@@ -37,9 +37,8 @@ int main() {
     Xn2[i] = WichmannHill(&X2);
   }
 
-  for (i = 0; i <= 9; i++) {
+  for (i = 0; i <= 9; i++)
     printf("%17.11lf        %13.11lf\n", Xn1[i], Xn2[i]);
-  }
 
   return 0;
 }
