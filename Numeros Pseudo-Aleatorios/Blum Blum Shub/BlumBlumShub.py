@@ -23,14 +23,11 @@ print("    Semente: 1234        Semente: TIME")
 print("    -------------        -------------\n")
 
 X1 = 1234
+X2 = int(time.time())
+
 for i in range(10):
     X1 = BlumBlumShub(X1)
-    Xn1[i] = X1
-
-X2 = int(time.time())
-for i in range(10):
     X2 = BlumBlumShub(X2)
+    Xn1[i] = X1
     Xn2[i] = X2
-
-for i in range(10):
     print(f"{Xn1[i]:17d}        {Xn2[i]:13d}")
