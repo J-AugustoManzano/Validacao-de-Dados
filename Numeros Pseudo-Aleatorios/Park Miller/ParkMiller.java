@@ -32,7 +32,6 @@ public class Main {
         for (i = 1; i <= 10; i++) {
             Xn1 = ParkMiller(Xn1);
             Xn2 = ParkMiller(Xn2);
-
             System.out.printf("%17d        %13d%n", Xn1, Xn2);
         }
       
