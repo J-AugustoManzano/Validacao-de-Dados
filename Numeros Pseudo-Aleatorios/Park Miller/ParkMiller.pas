@@ -20,6 +20,7 @@ var
   i: Integer;
   
 begin
+
   Xn1 := 1234; 
   Xn2 := LongWord(DateTimeToUnix(Now)); 
 
