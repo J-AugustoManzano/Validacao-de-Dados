@@ -29,13 +29,9 @@ public class Main {
 
         for (int i = 0; i <= 9; i++) {
             X1 = blumBlumShub(X1);
-            Xn1[i] = X1;
-
             X2 = blumBlumShub(X2);
+            Xn1[i] = X1;
             Xn2[i] = X2;
-        }
-
-        for (int i = 0; i <= 9; i++) {
             System.out.printf("%17d        %13d\n", Xn1[i], Xn2[i]);
         }
         
