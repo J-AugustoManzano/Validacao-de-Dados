@@ -31,13 +31,13 @@ func main() {
 	fmt.Println("    -------------        -------------")
 
 	var Xn1, Xn2 uint64
-	var seed1, seed2 uint64
+	var X1, X2 uint64
 
-	seed1 = 1234
-	AWCInitialize(seed1, &Xn1)
-
-	seed2 = uint64(time.Now().Unix())
-	AWCInitialize(seed2, &Xn2)
+	X1 = 1234
+	X2 = uint64(time.Now().Unix())
+  
+	AWCInitialize(X1, &Xn1)
+	AWCInitialize(X2, &Xn2)
 
 	for i := 1; i <= 10; i++ {
 		fmt.Printf("%17d        %13d\n", AWCNextRandom(&Xn1), AWCNextRandom(&Xn2))
