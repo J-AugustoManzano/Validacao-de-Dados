@@ -20,23 +20,19 @@ object Main {
     println("    -------------        -------------")
 
     var X1: BigInt = 1234
-    val Xn1 = new Array[BigInt](10)
     var X2: BigInt = System.currentTimeMillis() 
+    
+    val Xn1 = new Array[BigInt](10)
     val Xn2 = new Array[BigInt](10)    
     
     for (i <- 0 to 9) {
       Xn1(i) = blumBlumShub(X1)
       X1 = Xn1(i)
-    }
-
-    for (i <- 0 to 9) {
       Xn2(i) = blumBlumShub(X2)
       X2 = Xn2(i)
-    }
-
-    for (i <- 0 to 9) {
       printf("%17s        %13s\n", Xn1(i).toString, Xn2(i).toString)
     }
+	  
   }
   
 }
