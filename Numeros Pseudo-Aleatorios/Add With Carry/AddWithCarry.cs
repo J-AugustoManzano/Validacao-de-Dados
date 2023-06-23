@@ -37,9 +37,9 @@ class Program
         ulong seed1, seed2;
 
         seed1 = 1234;
-        AWCInitialize(seed1, ref Xn1);
-
         seed2 = (ulong)DateTime.Now.Ticks;
+     
+        AWCInitialize(seed1, ref Xn1);
         AWCInitialize(seed2, ref Xn2);
 
         for (i = 1; i <= 10; i++)
