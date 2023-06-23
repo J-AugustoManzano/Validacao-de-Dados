@@ -23,7 +23,6 @@ if __name__ == '__main__':
     print("    Semente: 1234        Semente: TIME")
     print("    -------------        -------------")
 
-    Xn1, Xn2 = 0, 0
     i = 0
     seed1, seed2 = 1234, int(time.time())
 
