@@ -27,9 +27,9 @@ if __name__ == '__main__':
     seed1, seed2 = 1234, int(time.time())
 
     Xn1 = AWCInitialize(seed1)
+    Xn2 = AWCInitialize(seed2)
 
     for i in range(1, 11):
-        Xn2 = seed2 + i
         Xn1 = AWCNextRandom(Xn1)
         Xn2 = AWCNextRandom(Xn2)
         print(f"{Xn1:>17}        {Xn2:>13}")
