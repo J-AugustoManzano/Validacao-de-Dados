@@ -30,19 +30,12 @@ namespace BlumBlumShubPRNG
             Console.WriteLine("    -------------        -------------");
 
             X1 = 1234;
+            X2 = (ulong)DateTime.Now.Ticks;
+          
             for (int i = 0; i <= 9; i++)
             {
                 Xn1[i] = BlumBlumShub(ref X1);
-            }
-
-            X2 = (ulong)DateTime.Now.Ticks;
-            for (int i = 0; i <= 9; i++)
-            {
                 Xn2[i] = BlumBlumShub(ref X2);
-            }
-
-            for (int i = 0; i <= 9; i++)
-            {
                 Console.WriteLine($"{Xn1[i],17}        {Xn2[i],13}");
             }
         }
