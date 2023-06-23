@@ -16,6 +16,7 @@ class Program
 
     static void Main()
     {
+        
         Console.WriteLine("GERADOR DE NUMEROS PSEUDO ALEATORIOS (GNA)");
         Console.WriteLine("PSEUDORANDOM NUMBER GENERATOR (PRNG)");
         Console.WriteLine("PADRAO: Wichmann Hill");
@@ -30,23 +31,17 @@ class Program
         int X1, X2;
 
         X1 = 1234;
+        X2 = (int)DateTime.Now.Ticks;
+      
         for (i = 0; i <= 9; i++)
         {
             Xn1[i] = WichmannHill(ref X1);
-        }
-
-        X2 = (int)DateTime.Now.Ticks;
-        for (i = 0; i <= 9; i++)
-        {
-            Xn2[i] = WichmannHill(ref X2);
-        }
-
-        for (i = 0; i <= 9; i++)
-        {
+            Xn2[i] = WichmannHill(ref X2);          
             Console.Write(Xn1[i].ToString("F11").PadLeft(17));
             Console.Write("    ");
             Console.WriteLine(Xn2[i].ToString("F11").PadLeft(17));
         }
+        
     }
     
 }
