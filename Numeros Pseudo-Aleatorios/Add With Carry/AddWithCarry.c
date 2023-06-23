@@ -28,11 +28,11 @@ int main(void) {
 
   unsigned int Xn1, Xn2;
   int i;
+ 
   unsigned int seed1 = 1234;
+  unsigned int seed2 = (unsigned int)time(NULL);
 
   AWCInitialize(seed1, &Xn1);
-
-  unsigned int seed2 = (unsigned int)time(NULL);
   AWCInitialize(seed2, &Xn2);
 
   for (i = 1; i <= 10; i++) {
