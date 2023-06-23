@@ -32,18 +32,13 @@ begin
   writeln('    -------------        -------------');
 
   X1 := 1234;
+  X2 := UInt32(DateTimeToUnix(Now));
+  
   for i := 1 to 10 do
   begin
     Xn1[i] := BlumBlumShub(X1);
-  end;
-  
-  X2 := UInt32(DateTimeToUnix(Now));;
-  for i := 1 to 10 do
-  begin
     Xn2[i] := BlumBlumShub(X2);
-  end;
-
-  for i := 1 to 10 do
     writeln(Xn1[i]:17, '        ', Xn2[i]:13);
+  end
 
 end.
