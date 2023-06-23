@@ -28,16 +28,11 @@ int main(void) {
   std::cout << "    -------------        -------------\n";
 
   X1 = 1234;
+  X2 = static_cast<unsigned int>(std::time(nullptr));
+
   for (int i = 0; i <= 9; i++) {
     Xn1[i] = BlumBlumShub(X1);
-  }
-
-  X2 = static_cast<unsigned int>(std::time(nullptr));
-  for (int i = 0; i <= 9; i++) {
-    Xn2[i] = BlumBlumShub(X2);
-  }
-
-  for (int i = 0; i <= 9; i++) {
+    Xn2[i] = BlumBlumShub(X2);    
     std::cout << std::setw(17) << Xn1[i] << "        " << std::setw(13) << Xn2[i] << "\n";
   }
 
