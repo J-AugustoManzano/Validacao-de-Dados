@@ -39,7 +39,6 @@ void main() {
   for (i = 1; i <= 10; i++) {
     Xn1[0] = AWCNextRandom(Xn1[0]);
     Xn2[0] = AWCNextRandom(Xn2[0]);
-
     stdout.write(' ' * (17 - Xn1[0].toString().length) + '${Xn1[0]}');
     stdout.write('        ');
     stdout.write(' ' * (13 - Xn2[0].toString().length) + '${Xn2[0]}');
