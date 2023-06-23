@@ -31,9 +31,9 @@ void main() {
   int seed1, seed2;
 
   seed1 = 1234;
-  AWCInitialize(seed1, Xn1);
-
   seed2 = DateTime.now().millisecondsSinceEpoch;
+
+  AWCInitialize(seed1, Xn1);
   AWCInitialize(seed2, Xn2);
 
   for (i = 1; i <= 10; i++) {
