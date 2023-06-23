@@ -36,8 +36,7 @@ object Main extends App {
   for (i <- 1 to 10) {
     Xn1 = AWCNextRandom(Xn1)
     Xn2 = AWCNextRandom(Xn2)
-    val output = f"${Xn1}%17d        ${Xn2}%13d"
-    println(output)
+    println(f"${Xn1}%17d        ${Xn2}%13d")
   }
 
 }
